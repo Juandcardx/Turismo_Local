@@ -1,17 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.Color;
+
 import java.awt.event.ActionListener;
 import static java.awt.Font.BOLD;
 
+// Se define la clase DialogoTabla que hereda de JDialog
 public class DialogoTabla extends JDialog 
 {
     private String[] nombreColumnas = {"Sitio", "Cantidad gente", "Tipo evento", "Fecha"};
     private String[] nombreSitio = {"Berbeo", "Kalema", "Tercer Tiempo", "La Arenosa Disco Bar", "Imperio", "El Sotano"};
     private String[] cantidadGente = {"40", "30", "20", "40", "40", "30"};
     private String[] tipoEvento = {"Discoteca", "Bar", "Bar", "Discoteca", "Discoteca bar", "Bar cuestionable"};
-    private String[] fechaEvento = {"10/06/2024", "10/06/2024", "10/06/2024", "10/06/2024", "10/06/2023", "9/06/2023"};
+    private String[] fechaEvento = {"01/12/2023", "01/12/2023", "10/06/2023", "01/12/2023", "01/12/2023", "01/12/2023"};
     private JTable tTablaEstudiantes;
     private JComboBox<String> cbSitioEvento;
     private JButton bRegistrarEvento;
@@ -23,7 +24,7 @@ public class DialogoTabla extends JDialog
             return col == 3;
         }
     };
-
+// Constructor de la clase
     public DialogoTabla() 
     {
 

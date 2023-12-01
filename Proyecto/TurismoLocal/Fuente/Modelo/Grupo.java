@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Grupo extends Evento
+public class Grupo extends Evento  // Se define la clase Grupo que hereda de Evento
 {
     private static int numPersonas;
     private String nomGrupo;
@@ -8,6 +8,7 @@ public class Grupo extends Evento
     private static String horaReunion;    
     private String tipoActividad;
 
+    // Constructor con tipo de actividad, gustos, nombre del grupo y hora de reunión
     public Grupo(String ptipoActividad, String pGustos, String pNomGrupo, String pHoraReunion)
     {
         super(numPersonas, pNomGrupo, pHoraReunion, ptipoActividad);
@@ -16,7 +17,7 @@ public class Grupo extends Evento
         this.nomGrupo = pNomGrupo;
         this.tipoActividad = ptipoActividad;
     }
-
+// Constructor con tipo de actividad, gustos y nombre del grupo
     public Grupo(String ptipoActividad, String pGustos, String pNomGrupo)
     {
         super(numPersonas, pNomGrupo, horaReunion, pGustos);
@@ -25,7 +26,7 @@ public class Grupo extends Evento
         this.tipoActividad = ptipoActividad;
         
     }
-
+// Métodos getter y setter para la hora de reunión
     public String getHoraReunion() 
     {
         return horaReunion;
@@ -34,6 +35,7 @@ public class Grupo extends Evento
     {
         Grupo.horaReunion = horaReunion;
     }
+    // Métodos getter y setter para el nombre del grupo
     public String getNomGrupo() 
     {
         return nomGrupo;
@@ -42,6 +44,7 @@ public class Grupo extends Evento
     {
         this.nomGrupo = nomGrupo;
     }
+    // Métodos getter y setter para el número de personas
     public static int getNumPersonas() 
     {
         return numPersonas;
@@ -50,6 +53,7 @@ public class Grupo extends Evento
     {
         Grupo.numPersonas = numPersonas;
     }
+    // Métodos getter y setter para los gustos
     public String getGustos() 
     {
         return gustos;
@@ -58,6 +62,7 @@ public class Grupo extends Evento
     {
         this.gustos = gustos;
     }
+    // Métodos getter y setter para el tipo de actividad
     public String gettipoActividad()
     {
         return this.tipoActividad;
@@ -66,7 +71,7 @@ public class Grupo extends Evento
     {
         this.tipoActividad = ptipoActividad;
     }
-
+// Método para calcular grupos según el número de personas
     public void calcularGrupos(int numPersonas)
     {
         int numGrupos = (numPersonas/5);

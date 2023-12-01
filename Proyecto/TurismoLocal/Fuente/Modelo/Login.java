@@ -1,16 +1,16 @@
 import java.io.*;
 
-public class Login 
+public class Login // Se define la clase Login
 {
     private String Usuario;
     private String Contraseña;
-
+// Constructor con usuario y contraseña
     public Login(String pUsuario, String pConstraseña)
     {
         this.Usuario = pUsuario;
         this.Contraseña = pConstraseña;
     }
-
+// Métodos getter y setter para el usuario
     public String getUsuario() 
     {
         return Usuario;
@@ -20,7 +20,7 @@ public class Login
     {
         Usuario = usuario;
     }
-
+// Métodos getter y setter para la contraseña
     public String getContraseña() 
     {
         return Contraseña;
@@ -30,7 +30,7 @@ public class Login
     {
         Contraseña = contraseña;
     }
-
+// Método para verificar el inicio de sesión
     public boolean verificarLogin(String usuario, String Contraseña)
     {
         boolean resultado = false;
@@ -75,7 +75,7 @@ public class Login
         }
         return resultado;
     }
-
+// Método para registrar un nuevo usuario
     public boolean registrarLogin(String usuario, String Contraseña)
     {
         boolean resultado = false;
@@ -99,7 +99,7 @@ public class Login
         return resultado;
     }
 
-    
+    // Método para verificar la existencia de un usuario
     public boolean verificarExistenciaUsuario(String usuario)
     {
         boolean existe = false;

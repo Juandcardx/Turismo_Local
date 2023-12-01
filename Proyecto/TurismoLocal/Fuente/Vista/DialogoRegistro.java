@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+// Se define la clase DialogoRegistro que hereda de JDialog
 public class DialogoRegistro extends JDialog
 {
     private JLabel lbTitulo;
@@ -16,6 +17,7 @@ public class DialogoRegistro extends JDialog
     private JTextField txContraseña;
     private JButton btAceptar;
 
+    // Constructor de la clase
     public DialogoRegistro()
     {
         setLayout(null);
@@ -58,24 +60,24 @@ public class DialogoRegistro extends JDialog
         setVisible(true);
 
         JPanel contentPane = (JPanel) getContentPane();
-        contentPane.setBackground(Color.decode("#F5BCA9"));
+        contentPane.setBackground(Color.decode("#D2D79F"));
     }
-
+// Método para obtener el texto del campo de usuario
     public String getUsuario() 
     {
         return txUsuario.getText();
     }
-
+// Método para obtener el texto del campo de contraseña
     public String getContraseña() 
     {
         return txContraseña.getText();
     }
-
+// Método para agregar oyentes a los botones
     public void agregarOyentesBotones(ActionListener pAL)
     {
         btAceptar.addActionListener(pAL);
     }
-
+// Método para cerrar el diálogo
     public void cerrarDialogo()
     {
         this.dispose();
